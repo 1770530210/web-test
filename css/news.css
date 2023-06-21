@@ -1,0 +1,53 @@
+/* 
+低  元素选择器：元素名称{               
+                内容
+            }
+
+高  ID选择器:#id属性值{             
+                内容
+            }   
+
+中  类选择器：.class属性值{         
+                内容
+            }
+*/
+/* 
+盒子模型：
+    margin(外边距)
+        border（边界）
+            padding（边距）
+                content（内容）
+*/
+h1{
+    color: rgb(141, 137, 137);
+}
+span{
+    color: aqua;
+}
+a{
+    color: black;
+    text-decoration: none;/* 文本装饰 */
+}
+p{
+    text-indent: 35px;/* 首行缩进 */
+    line-height: 40px;/* 行高 */
+}
+table{
+    width: 70%;
+    margin: auto;
+}
+div{
+    width: 65%;
+    /* margin: 0% 17.5% 0 17.5%; */
+    margin: 0 auto;
+}
+#time{
+    color: yellowgreen;
+    font-size: 20px;/* 字体大小 */
+}
+#paste{
+    text-align: right; /* 文本对齐方式 */
+}
+.cls{
+    color: blueviolet;
+}
