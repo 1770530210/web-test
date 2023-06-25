@@ -230,3 +230,20 @@
 <input type="button" onclick="on()" value="按钮1">
 function on(){alert("被点击")}
 */
+// 方式二：通过DOM元素绑定
+/*
+<input type="button" id="btn" value="按钮1">
+document.getElementById("btn").onclick=function(){alert("被点击")}
+*/
+
+// 常见事件
+/*
+onclick     鼠标点击事件
+onblur      元素失去焦点
+onfocus     元素获得焦点
+onload      某个页面或图像被完成加载
+onsubmit    当表单提交时触发该事件
+onkeydown   某个键盘的键被按下
+onmouseover 鼠标被一道某元素之上
+onmouseout 鼠标从某元素移开
+*/
