@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue-快速入门</title>
+    <!-- <script src="js/vue.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body> 
+    <div id="app">
+        <input type="text" v-model="message">
+        {{message}} 
+    </div>
+</body>
+<!-- 
+插值表达式
+    形式：{{表达式}}
+    内容可以是：
+        变量
+        三元运算符
+        函数调用
+        算术运算
+-->
+<script>
+    //定义Vue对象
+    new Vue({
+        el:"#app",//vue接管的区域
+        data: {//定义数据模型
+            message:"Hello Vue"
+        }
+    })
+</script>
+</html>
+<!-- 
+1.引入Vue.js
+
+<script src="/js/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>      推荐
+
+2/创建Vue核心对象，定义数据模型
+
+<script>
+    //定义Vue对象
+    new Vue({
+        el:"#app",//vue接管的区域
+        data: {//定义数据模型
+            message:"Hello Vue"
+        }
+    })
+</script>
+
+3.编写视图
+
+    <div id="app">
+        <input type="text" v-model="message">
+        {{message}} 
+    </div>
+
+ -->
