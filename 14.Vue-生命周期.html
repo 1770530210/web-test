@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue-生命周期</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+    <div id="app"></div>
+<body>
+</body>
+<script>
+    new Vue({
+        el:"app",
+        data:{
+
+        },
+        methods: {
+            
+        },
+        mounted () {
+            console.log("Vue挂载完成，发生请求获取数据")
+        }
+    })
+</script>
+</html>
+<!-- 
+    生命周期：指一个对象从创建到销毁的整个过程
+
+    八个阶段：
+
+    状态：                              new Vue
+    beforeCreate    创建前              初始化（注入&校验）                         |->fou  将el外部的HTML作为template编译
+    created         创建后              是否指定"el"?   ->是否指定"template"选项?    ->shi  将template编译到render函数中
+    beforeMount     挂载前              创建vm.$el,并用其替代"el"
+    mounted         挂载后              挂载完毕，Vue初始化成功，HTML页面渲染成功（发送请求到服务端，加载数据）       1.修改data->    beforeUpdate          2.调用vm.$destroy()函数->   beforeDestroy
+    
+    beforeUpdate    更新前              虚拟DOM重新渲染并应用更新
+    updated         更新后              
+
+    beforeDestroy   销毁前              解除绑定 ，销毁子组件以及事件监听器      
+    destroy         销毁后              销毁完成
+
+ -->
