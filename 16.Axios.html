@@ -8,8 +8,8 @@
         <meta name="description" content>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- 引入 -->
-        <!-- <script src="js/axios-0.18.0.js"></script> -->
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="js/axios-0.18.0.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
     </head>
 
     <body>
@@ -17,11 +17,42 @@
 
         <input type="button" value="删除数据Post" onclick="post()">
     </body>
-    <script></script>
+    <script>
+    function get() {
+        // axios(
+        //     {
+        //         method: "get",
+        //         url: "http://yapi.smart-xwork.cn/mock/169327/emp/list"
+        //     }  
+        // ).then((result) => {
+        //     console.log(result.data)
+        // });
+
+        axios.get("http://yapi.smart-xwork.cn/mock/169327/emp/list").then((result)=>{
+            console.log(result.data)
+        })
+    }
+    function post() {
+        // axios(
+        //     {
+        //         method: "post",
+        //         url: "http://yapi.smart-xwork.cn/mock/169327/emp/deleteById",
+        //         data: "id=1"
+        //     }
+        // ).then(result => {
+        //     console.log(result.data)
+        // });
+
+        axios.post("http://yapi.smart-xwork.cn/mock/169327/emp/deleteById","id=1").then(result => {
+            console.log(result.data)
+        })
+    }
+</script>
 
 </html>
 <!-- 
     使用Axios发送请求
+
     axios(
         {
             method:"get",
@@ -29,7 +60,7 @@
         }
     ).then((result))=>{
         console.log(result.data)
-    }
+    })
 
     axios(
         {
@@ -39,5 +70,19 @@
         }
     ).then((result))=>{
         console.log(result.data)
-    }
+    })
+
+    请求方式别名：
+    axios.get(url[,config])
+    axios.delete(url[,config])
+    axios.post(url[,data[,config]])
+    axios.put(url[,data[,config]])
+
+    axios.get("http://yapi.smart-xwork.cn/mock/169327/emp/list").then((result))=>{
+        console.log(result.data)
+    })
+
+    axios.post("http://yapi.smart-xwork.cn/mock/169327/emp/deleteById","id=1").then(result => {
+            console.log(result.data)
+    })
  -->
