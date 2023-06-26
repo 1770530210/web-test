@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Axios-入门</title>
+        <meta name="description" content>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- 引入 -->
+        <script src="js/axios-0.18.0.js"></script>
+    </head>
+
+    <body>
+        <input type="button" value="获取数据" onclick="getData()">
+        <div id="div1"></div>
+    </body>
+    <script></script>
+
+</html>
+<!-- 
+    使用Axios发送请求
+    axios(
+        {
+            method:"get",
+            url:"http://yapi.smart-xwork.cn/mock/169327/emp/list"
+        }
+    ).then((result))=>{
+        console.log(result.data)
+    }
+
+    axios(
+        {
+            method:"post",
+            url:"http://yapi.smart-xwork.cn/mock/169327/emp/deleteById",
+            data:"id=1"
+        }
+    ).then((result))=>{
+        console.log(result.data)
+    }
+ -->
